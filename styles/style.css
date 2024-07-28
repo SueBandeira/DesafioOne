@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #F3F5FC;
+    --cor-secundaria: #0A3871;
+    --cor-terciaria: #D8DFE8;
+    --cor-quartenaria: #356EA9;
+    --cor-branca: #ffffff;
+
+    --fonte-primaria: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*box-sizing: border-box;*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+/*Main: parte do conteúdo*/
+.decodificador {
+    display: flex;
+    gap: 5rem;
+}
+
+.cabecalho {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+/*============================================================================*/
+/* ELEMENTOS DA ESQUERDA*/
+.decoficador__elementosEsq {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 168px;
+    padding-left: 80px;
+}
+
+/*Texto de entrada*/
+.decodificador__elementosEsq__entrada {
+    width: 680px;
+    height: 650px;
+    border-style: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 2rem;
+    resize: none;
+    outline: 0;
+}
+#texto::placeholder {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 2rem; 
+    color: var(--cor-secundaria);  
+}
+
+/*Mensagens de aviso*/
+.decodificador__elementosEsq__aviso {
+    display: flex;
+    gap: 8px;
+}
+
+/*Propriedades do botão*/
+.decodificador__elementosEsq__botoes {
+    display: flex;
+    gap: 24px;
+}
+/*Botão criptografar*/
+.decodificador__elementosEsq__texto {
+    height: 4.175rem;
+    width: 20.5rem;
+    border: 1px solid var(--cor-secundaria);
+    text-align: center;
+    border-radius: 24px;
+    padding: 1.34375rem 0;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1rem;
+}
+.decodificador__elementosEsq__texto:hover {
+    background-color: var(--cor-quartenaria);
+}
+/*Botão descriptografar*/
+.decodificador__elementosEsq__cripto {
+    height: 4.175rem;
+    width: 20.5rem;
+    border: 1px solid var(--cor-secundaria);
+    text-align: center;
+    border-radius: 24px;
+    padding: 1.34375rem 0;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1rem;
+}
+.decodificador__elementosEsq__cripto:hover {
+    background-color: var(--cor-primaria);
+}
+
+/*============================================================================*/
+/*ELEMENTOS DA DIREITA*/
+.decodificador__elementosDir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Mensagem de em cima do textoarea*/
+.decodificador__elementosDir__detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    top: 283px;
+    left: 1032px;
+    gap: 0.5rem;
+    width: 336px;
+}
+.decodificador___elementosDir__detalhes__titulo {
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    text-align: center;
+}
+.decodificador___elementosDir__detalhes__paragrafo {
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*Texto criptografado*/
+.decodificador__elementosDir__saida{
+    height: 59rem;
+    width: 25rem;
+    /*Talvez não necessecite*/
+    padding-top: 40px;
+    padding-right: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    border-style: hidden;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.15),
+                0px 2px 4px rgba(0,0,0,0.15),
+                0px 4px 8px rgba(0,0,0,0.15),
+                0px 8px 16px rgba(0,0,0,0.15);
+    border-radius: 32px;
+    resize: none;
+    outline: 0;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem; 
+    background-color: var(--cor-branca);
+    color: var(--cor-secundaria);  
+    padding: 2%;
+}
+
+/*botao de copiar*/
+.decodificador__elementosDir__copiar {
+    left: 1032px;
+    top: 867px;
+    transform: translateX(-2%);
+    height: 4.175rem;
+    width: 20.5rem;
+    border: 1px solid var(--cor-secundaria);
+    text-align: center;
+    border-radius: 24px;
+    padding: 1.34375rem 0;
+    background-color: #ffffff;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1rem;
+}
+.decodificador__elementosDir__cripto:hover {
+    background-color: var(--cor-primaria);
+}
+
+.rodape {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
+    padding: 17px;
+}
+
+/*===========================================================*/
+/*Tablet*/
+@media (max-width: 798px) {
+    .cabecalho{
+         padding: 0%;  
+    }
+    .decodificador{
+        flex-direction: column;
+        padding: 5%;
+    }
+    .decodificador__elementosEsq {
+        width: auto;
+    }
+    .decodificador__elementosEsq__entrada{
+        width: auto;
+    }
+    .decodificador__elementosDir {
+        width: auto;
+        flex-direction: column;
+        padding-left: 80px;
+        justify-content: flex-end;
+        align-items:center;
+        position: relative;
+    }
+    .decodificador__elementosDir__saida {
+        max-width: auto;
+        height: 160px;
+    }
+    .decodificador__elementosDir__detalhes img{
+        display: none;
+    }
+    .decodificador__elementosDir__detalhes {
+        display: none;
+    }
+
+}
+
+/*Smartphone*/
+@media (max-width: 375px) {
+    .cabecalho{
+         padding: 0%;  
+    }
+    .decodificador{
+        flex-direction: column;
+        padding: 0%;
+    }
+    .decoficador__elementosEsq {
+        width: auto;
+    }
+    .decodificador__elementosEsq__entrada{
+        width: auto;
+    }
+    .decodificador__elementosDir {
+        width: auto;
+        flex-direction: column;
+        padding-left: 80px;
+        justify-content: flex-end;
+        align-items:center;
+        position: relative;
+    }
+    .decodificador__elementosDir__saida {
+        max-width: auto;
+        height: 160px;
+    }
+    .decodificador__elementosDir__detalhes img{
+        display: none;
+    }
+    .decodificador__elementosDir__detalhes {
+        display: none;
+    }
+    .decodificador__elementosEsq__aviso {
+        justify-content: center;
+        align-items: center;
+    }
+    .decodificador__elementosEsq__botoes{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+}

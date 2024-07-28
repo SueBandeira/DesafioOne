@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <main class="decodificador">
+
+        <!--Cabecalho com imagem-->
+        <header class="cabecalho">
+            <img src="./assets/logo.png" alt="Logo da Alura">
+        </header>
+
+        <!--Elementos: textarea1, mensagem e imagem de aviso, e botões-->
+        <div class="decoficador__elementosEsq">
+
+            <textarea id="texto" placeholder="Digite seu texto" class="decodificador__elementosEsq__entrada"></textarea>
+
+            <div class="decodificador__elementosEsq__aviso">
+                <img src="./assets/Vector.png" alt="Ponto de exclamação">
+                <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+    
+            <div class="decodificador__elementosEsq__botoes">
+                <button id="criptografar" class="decodificador__elementosEsq__texto">Criptografar</button>
+                <button id="descriptografar" class="decodificador__elementosEsq__cripto">Descriptografar</button>
+            </div>
+
+        </div>
+
+        <!--Elementos: textarea2, imagem, h2 e paragrafo, e botão copiar-->
+        <div class="decodificador__elementosDir">
+
+            <div class="decodificador__elementosDir__detalhes">
+                <img src="./assets/detalhes.svg">
+                <h2 class="decodificador___elementosDir__detalhes__titulo">Nenhum mensagem encontrada</h2>
+
+                <p class="decodificador___elementosDir__detalhes__paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+
+            <textarea id="textoCripto" disabled class="decodificador__elementosDir__saida" ></textarea>
+
+            <button id="copiar" style="display: none;" class="decodificador__elementosDir__copiar">Copiar</button>
+        </div>
+
+    </main>
+
+    <footer class="rodape">Desenvolvido por Sue Bandeira 2024</footer>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
