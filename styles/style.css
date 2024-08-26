@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+/*Varieaveis globais*/
 :root {
     --cor-primaria: #F3F5FC;
     --cor-secundaria: #0A3871;
@@ -9,43 +9,50 @@
 
     --fonte-primaria: 'Inter', sans-serif;
 }
-
+/*reset as configurações padrão do CSS*/
 * {
     margin: 0;
     padding: 0;
 }
-
 body {
-    /*box-sizing: border-box;*/
+    height: 100vh;
+    width: 100vw;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
-
 /*Main: parte do conteúdo*/
 .decodificador {
     display: flex;
-    gap: 5rem;
+    height: 100vh;
+    width: 100vw;
 }
-
 .cabecalho {
-    margin-top: 40px;
-    margin-left: 40px;
+    width: 16.66666667%; /* 240px de 1440px */
+    height: 100%;
 }
-
+.cabecalho img {
+    margin-left: 16.666667%; /* 40px de 240px */
+    margin-top: 16.66667%; /* 40px de 1024px/240px */ 
+}
 /*============================================================================*/
-/* ELEMENTOS DA ESQUERDA*/
-.decoficador__elementosEsq {
+/* ELEMENTOS DA ESQUERDA - PARTE 2 DO MAIN*/
+.decodificador___elementos {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-top: 168px;
-    padding-left: 80px;
+    width: 83.33333333%; /* 1200px de 1440px */
+    height: 100%;
 }
-
+.decodificador__elementosEsq {
+   width: 60%;/* 720px de 1200px */
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
 /*Texto de entrada*/
 .decodificador__elementosEsq__entrada {
-    width: 680px;
-    height: 650px;
+    width: 94.44444444%;/* 680px de720px */
+    height: 65.13671875%;/* 667px de 1024px */
+    margin-top: 168px;
     border-style: none;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
@@ -61,25 +68,26 @@ body {
     font-size: 2rem; 
     color: var(--cor-secundaria);  
 }
-
 /*Mensagens de aviso*/
 .decodificador__elementosEsq__aviso {
     display: flex;
-    gap: 8px;
-}
-
-/*Propriedades do botão*/
+    gap: 0.5rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 0.75rem; 
+    color: var(--cor-secundaria); 
+}/*Propriedades do botão*/
 .decodificador__elementosEsq__botoes {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
 }
 /*Botão criptografar*/
 .decodificador__elementosEsq__texto {
-    height: 4.175rem;
-    width: 20.5rem;
+    height: 100%;/*67px de 67px*/
+    width: 45.555555555%;/*328px de 720px*/
     border: 1px solid var(--cor-secundaria);
     text-align: center;
-    border-radius: 24px;
+    border-radius: 1.5rem;
     padding: 1.34375rem 0;
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
@@ -92,8 +100,8 @@ body {
 }
 /*Botão descriptografar*/
 .decodificador__elementosEsq__cripto {
-    height: 4.175rem;
-    width: 20.5rem;
+    height: 100%;/*67px de 67px*/
+    width: 45.555555555%;/*328px de 720px*/
     border: 1px solid var(--cor-secundaria);
     text-align: center;
     border-radius: 24px;
@@ -107,26 +115,46 @@ body {
 .decodificador__elementosEsq__cripto:hover {
     background-color: var(--cor-primaria);
 }
-
-/*============================================================================*/
-/*ELEMENTOS DA DIREITA*/
+/*TODA A PARTE DA DIREITA*/
 .decodificador__elementosDir {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: darkgreen;
+    width: 40%;
+    height: 100%;
 }
-
+/*O SECTION QUE CONTÉM A CAIXA BRANCA PARA O TEXTAREA2*/
+.decodificador__elementosDir__section {
+    background-color: #356EA9;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 83.3333333333%;/*400px de 480px*/
+    height: 92.1875%;/*944px de 1024px*/
+    margin-left: 40px;
+    margin-top: 40px;
+    border-style: hidden;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.15),
+                0px 2px 4px rgba(0,0,0,0.15),
+                0px 4px 8px rgba(0,0,0,0.15),
+                0px 8px 16px rgba(0,0,0,0.15);
+    border-radius: 2rem;
+    position: relative;
+}
 /*Mensagem de em cima do textoarea*/
 .decodificador__elementosDir__detalhes {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     justify-content: center;
-    top: 283px;
-    left: 1032px;
     gap: 0.5rem;
-    width: 336px;
+    width: 84%;/**/
+    height: 48.5162%;
+    margin-top: 30%;
+    position: absolute;
+    z-index: 2;
+}
+.decodificador__elementosDir__detalhes img{
+    width: 84%;
+    height: 66.3755%;
 }
 .decodificador___elementosDir__detalhes__titulo {
     font-family: var(--fonte-primaria);
@@ -138,23 +166,11 @@ body {
     font-size: 1rem;
     text-align: center;
 }
-
 /*Texto criptografado*/
 .decodificador__elementosDir__saida{
-    height: 59rem;
-    width: 25rem;
-    /*Talvez não necessecite*/
-    padding-top: 40px;
-    padding-right: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 40px;
-    border-style: hidden;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.15),
-                0px 2px 4px rgba(0,0,0,0.15),
-                0px 4px 8px rgba(0,0,0,0.15),
-                0px 8px 16px rgba(0,0,0,0.15);
-    border-radius: 32px;
+    width: 84%;/*336px de 400px*/
+    height: 82.73305085%;/*781px de 944px*/
+    margin-top: 32px;/*32px de 944px*/
     resize: none;
     outline: 0;
     font-family: var(--fonte-primaria);
@@ -162,16 +178,16 @@ body {
     font-size: 1.5rem; 
     background-color: var(--cor-branca);
     color: var(--cor-secundaria);  
-    padding: 2%;
+    position: absolute;
+    z-index: 1;
 }
-
 /*botao de copiar*/
 .decodificador__elementosDir__copiar {
-    left: 1032px;
-    top: 867px;
-    transform: translateX(-2%);
-    height: 4.175rem;
-    width: 20.5rem;
+    height: 7.097457627%;/*67px de 944px*/
+    width: 84%;/*336x de 400px*/
+    position: absolute;
+    top: 845px;
+    z-index: 2;
     border: 1px solid var(--cor-secundaria);
     text-align: center;
     border-radius: 24px;
@@ -184,97 +200,4 @@ body {
 }
 .decodificador__elementosDir__cripto:hover {
     background-color: var(--cor-primaria);
-}
-
-.rodape {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-primaria);
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: var(--fonte-primaria);
-    padding: 17px;
-}
-
-/*===========================================================*/
-/*Tablet*/
-@media (max-width: 798px) {
-    .cabecalho{
-         padding: 0%;  
-    }
-    .decodificador{
-        flex-direction: column;
-        padding: 5%;
-    }
-    .decodificador__elementosEsq {
-        width: auto;
-    }
-    .decodificador__elementosEsq__entrada{
-        width: auto;
-    }
-    .decodificador__elementosDir {
-        width: auto;
-        flex-direction: column;
-        padding-left: 80px;
-        justify-content: flex-end;
-        align-items:center;
-        position: relative;
-    }
-    .decodificador__elementosDir__saida {
-        max-width: auto;
-        height: 160px;
-    }
-    .decodificador__elementosDir__detalhes img{
-        display: none;
-    }
-    .decodificador__elementosDir__detalhes {
-        display: none;
-    }
-
-}
-
-/*Smartphone*/
-@media (max-width: 375px) {
-    .cabecalho{
-         padding: 0%;  
-    }
-    .decodificador{
-        flex-direction: column;
-        padding: 0%;
-    }
-    .decoficador__elementosEsq {
-        width: auto;
-    }
-    .decodificador__elementosEsq__entrada{
-        width: auto;
-    }
-    .decodificador__elementosDir {
-        width: auto;
-        flex-direction: column;
-        padding-left: 80px;
-        justify-content: flex-end;
-        align-items:center;
-        position: relative;
-    }
-    .decodificador__elementosDir__saida {
-        max-width: auto;
-        height: 160px;
-    }
-    .decodificador__elementosDir__detalhes img{
-        display: none;
-    }
-    .decodificador__elementosDir__detalhes {
-        display: none;
-    }
-    .decodificador__elementosEsq__aviso {
-        justify-content: center;
-        align-items: center;
-    }
-    .decodificador__elementosEsq__botoes{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-    }
-
 }
